@@ -1,5 +1,13 @@
 # SN1000 Documentation
 
+1. [Setup](#setup)
+	1. [xnsocadmin](#xnsocadmin)
+	2. [Serial Connection](#serial-connection)
+		1. [USB-uart Adapter](#usb-uart-adapter)
+		2. [OS installation](#os-installation)
+2. [MISC](#MISC)
+3. [Connect to the soc inside a vm](#connect-to-the-soc-inside-a-vm)
+
 ## Setup
 The card has 2 ports. Port 1 is used for management and port 2 is for ethernet. When only port 1 is connected the speed is slow, but when both ports are connected, they are somehow equally fast.
 
@@ -114,10 +122,10 @@ SOC Version Information
     Recovery buildroot: 1.3.1.0000
 ```
 
-## Usage
+## MISC
 Note that up until now we are either working inside a vm or through the usb cable. To make the card work bare metal, we still need to patch the dkms driver, porting it to a newer version of the kernel. Or just simply run old kernel instead (the problem with old kernel is that a lot of features are not available there).
 
-### Connect to the soc inside a vm
+## Connect to the soc inside a vm
 
 1. First make sure that iommu is enabled.
 
