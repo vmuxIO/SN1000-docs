@@ -7,7 +7,7 @@
 		2. [OS installation](#os-installation)
 2. [MISC](#MISC)
 3. [Connect to the soc inside a vm](#connect-to-the-soc-inside-a-vm)
-4. [Firmware/driver versions](#firmware-driver-verisons)
+4. [Firmware/driver versions](#firmwaredriver-verisons)
 
 ## Setup
 The card has 2 ports. Port 1 is used for management and port 2 is for ethernet. When only port 1 is connected the speed is slow, but when both ports are connected, they are somehow equally fast.
