@@ -7,6 +7,7 @@
 		2. [OS installation](#os-installation)
 2. [MISC](#MISC)
 3. [Connect to the soc inside a vm](#connect-to-the-soc-inside-a-vm)
+4. [Firmware/driver versions](#firmware-driver-verisons)
 
 ## Setup
 The card has 2 ports. Port 1 is used for management and port 2 is for ethernet. When only port 1 is connected the speed is slow, but when both ports are connected, they are somehow equally fast.
@@ -179,3 +180,11 @@ ens5
 ```
 # xnsocadmin ioctl=ens4 maintenance
 ```
+
+## Firmware/driver versions
+
+Linux version 5.4 (and some later ones) work with xlinx provided dkms driver (updating firmware and everything works, contains vDPA code). 
+
+Linux version 5.9 got the driver driver upstreamed. It supports internet only (no firmware updating, no vDPA code). 
+
+We have xilinx dmks driver patches for example for 5.15. It can install new firmware, but some things like ARM SOC access doesn't work. 
